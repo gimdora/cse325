@@ -1,0 +1,10 @@
+Sales Summary
+----------------------------
+ Total Sales: $2,012.20
+
+ Details:
+  sales.json: $88.88
+  201\sales.json: $501.22
+  202\sales.json: $1,234.22
+  203\sales.json: $99.00
+  204\sales.json: $88.88

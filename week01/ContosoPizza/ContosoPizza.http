@@ -1,0 +1,39 @@
+@ContosoPizza_HostAddress = http://localhost:5051
+
+### 1. GET all pizzas (shows the 2 original pizzas + Bulgogi)
+GET {{ContosoPizza_HostAddress}}/pizza
+Accept: application/json
+
+### 2. POST - create a new pizza (expect 201 Created, new Id = 4)
+POST {{ContosoPizza_HostAddress}}/pizza
+Content-Type: application/json
+
+{
+    "name": "Hawaiian",
+    "isGlutenFree": false
+}
+
+### 3. GET one pizza by Id (expect 200 OK)
+GET {{ContosoPizza_HostAddress}}/pizza/4
+Accept: application/json
+
+### 4. PUT - update pizza 4 (expect 204 No Content)
+PUT {{ContosoPizza_HostAddress}}/pizza/4
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Hawaiian Deluxe",
+    "isGlutenFree": false
+}
+
+### 5. GET pizza 4 again to confirm the update (expect 200 OK)
+GET {{ContosoPizza_HostAddress}}/pizza/4
+Accept: application/json
+
+### 6. DELETE pizza 4 (expect 204 No Content)
+DELETE {{ContosoPizza_HostAddress}}/pizza/4
+
+### 7. GET all pizzas to confirm the delete (expect 200 OK)
+GET {{ContosoPizza_HostAddress}}/pizza
+Accept: application/json

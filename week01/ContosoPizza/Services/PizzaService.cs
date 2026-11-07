@@ -5,14 +5,14 @@ namespace ContosoPizza.Services;
 public static class PizzaService
 {
     static List<Pizza> Pizzas { get; }
-    static int nextId = 4; // W01 assignment: was 3, changed to 4 because a third pizza was added
+    static int nextId = 4;
     static PizzaService()
     {
         Pizzas = new List<Pizza>
         {
             new Pizza { Id = 1, Name = "Classic Italian", IsGlutenFree = false },
             new Pizza { Id = 2, Name = "Veggie", IsGlutenFree = true },
-            new Pizza { Id = 3, Name = "Bulgogi", IsGlutenFree = false } // W01 assignment: additional pizza
+            new Pizza { Id = 3, Name = "Bulgogi", IsGlutenFree = false }
         };
     }
 
